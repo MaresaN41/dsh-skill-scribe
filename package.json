@@ -1,0 +1,59 @@
+{
+  "name": "dsh-skill-scribe",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin that drafts reusable SKILL.md proposals from finished turns. Nothing is activated until a human accepts it.",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "skills",
+    "agent",
+    "plugin"
+  ],
+  "license": "MIT",
+  "author": "MaresaN",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaresaN41/dsh-skill-scribe.git"
+  },
+  "homepage": "https://github.com/MaresaN41/dsh-skill-scribe#readme",
+  "bugs": {
+    "url": "https://github.com/MaresaN41/dsh-skill-scribe/issues"
+  },
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "scribe": "bin/scribe.js"
+  },
+  "files": [
+    "index.js",
+    "src",
+    "bin",
+    "examples",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "E2E.md"
+  ],
+  "engines": {
+    "node": ">=20.3.0",
+    "dsh": ">=0.2.0-rc.2 <0.3"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-llm": ">=0.2.0-rc.2 <0.3",
+    "@deepseek-ai/schemastery": "~3.18.4"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/schemastery": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}
