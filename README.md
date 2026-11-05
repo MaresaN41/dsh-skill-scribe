@@ -51,6 +51,12 @@ dsh plugin --profile <profile> add /absolute/path/to/dsh-skill-scribe
 
 `<profile>` は使っている dsh のプロファイル名に、パスは clone した場所の絶対パスに置き換えてください（例: `dsh plugin --profile headless add /home/you/src/dsh-skill-scribe`）。パッケージの `dsh.bundle.patch` で自動的に登録されるので、`--patch` を足す必要はありません。
 
+clone せずに GitHub から直接入れることもできます。
+
+```sh
+dsh plugin --profile <profile> add github:MaresaN41/dsh-skill-scribe
+```
+
 ### クイックスタート
 
 dsh のセッションで、ツールをいくつか使う作業を実行します。ターンが終わると、バックグラウンドで候補が作られます。
@@ -222,6 +228,12 @@ dsh plugin --profile <profile> add /absolute/path/to/dsh-skill-scribe
 ```
 
 Replace `<profile>` with your dsh profile name and the path with the absolute path to your clone (for example, `dsh plugin --profile headless add /home/you/src/dsh-skill-scribe`). The plugin registers itself through the package's `dsh.bundle.patch`, so no extra `--patch` is needed.
+
+You can also install straight from GitHub without cloning:
+
+```sh
+dsh plugin --profile <profile> add github:MaresaN41/dsh-skill-scribe
+```
 
 ### Quick start
 
